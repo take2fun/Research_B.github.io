@@ -11,12 +11,14 @@
   <script type="text/processing">
 		//non-liner
 
+//non-liner
+
 int x = 0;
 int y = 0;
 
 int task = 0;
 
-int scene = 0;
+int scene = 1;
 
 int f = 0;
 String scene_name = "";
@@ -59,35 +61,38 @@ void draw() {
   //println("num:"+num);
 
   switch(scene) {
-  case 0:
-    fill(0);
-    textSize(56);
-    textAlign(CENTER);
-    text("Click A or B", width/2, height/8);
-    textSize(120);
-    text("A", width/4, height/2);
-    text("B", width*3/4, height/2);
+  //case 0:
+  //  fill(0);
+  //  textSize(56);
+  //  textAlign(CENTER);
+  //  text("Click A or B", width/2, height/8);
+  //  textSize(120);
+  //  text("A", width/4, height/2);
+  //  text("B", width*3/4, height/2);
 
-    noFill();
-    rect(width/8, height/4, width/4, height/2);
-    rect(width*5/8, height/4, width/4, height/2);
+  //  noFill();
+  //  rect(width/8, height/4, width/4, height/2);
+  //  rect(width*5/8, height/4, width/4, height/2);
 
-    break;
+  //  break;
 
   case 1:
     fill(0);
     textSize(56);
     textAlign(CENTER);
-    text("Push Enterkey to Strat", width/2, height/2);
+    text("Push Enterkey to Start", width/2, height/2);
+    
+    scene_name = "A";
+    scene_number = 2;
 
-    if (scene_eva == true) {
-      scene_name = "A";
-      scene_number = 2;
-    } else {
-      scene_name = "B";
-      scene_number = 3;
-    }
-    text("Your selected " + scene_name, width/2, (height/2)-100);
+    //if (scene_eva == true) {
+    //  scene_name = "A";
+    //  scene_number = 2;
+    //} else {
+    //  scene_name = "B";
+    //  scene_number = 3;
+    //}
+    //text("Your selected " + scene_name, width/2, (height/2)-100);
 
     break;
 
@@ -355,7 +360,6 @@ void mouseReleased() {
     }
   }
 }
-
 
     </script>
   <canvas></canvas>
